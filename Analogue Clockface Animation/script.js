@@ -2,7 +2,7 @@ function clockHandsMove() {
     let d = new Date();
     let secs = d.getSeconds();
     let mins = d.getMinutes() + secs/60;
-    let hrs = (d.getHours() - 12) + mins/60;
+    let hrs = (d.getHours() % 12) + mins/60;
 
     let secsAngle = secs * 6;
     let minsAngle = mins * 6;
